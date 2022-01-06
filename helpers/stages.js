@@ -1,6 +1,6 @@
 var states = {
     0 :{
-        message : "Good day ! Thank you for choosing our restaurant"
+        message : "Hello ! I hope you are doing good today"
     },
     1 :{
         message : ""

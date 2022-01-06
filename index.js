@@ -26,10 +26,14 @@ client.on('message', message => {
     
     if(cpt == 2){
         message.reply('Your order is under process');
-        orders_final.push({
-           // client_number : "6454444",
-            order : message.body
-        })
+
+        if(message.body == 1 || message.body == 2 || message.body == 3)
+            orders_final.push({
+            // client_number : "6454444",
+                order_number : message.body
+            })
+        else 
+        cpt = 0
     }
     //stage 2
     if(cpt == 3){
@@ -40,7 +44,7 @@ client.on('message', message => {
             if(message.body == 1 || message.body == 2 || message.body == 3)
                 orders_final.push({
                    // client_number : "6454444",
-                    order : parseInt(message.body)
+                   order_number : parseInt(message.body)
                    
                 })
         }    
@@ -65,7 +69,7 @@ function getStage(stage){
     if(stage == 3 ){
         for (let index = 0; index < orders_final.length; index++) {
             
-            states[3].cost +=  menu[orders_final[index].order - 1].prix
+            states[3].cost +=  menu[orders_final[index].order_number - 1].prix
             
         }
        // return message_choix_menu+states[1].message

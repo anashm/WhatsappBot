@@ -8,7 +8,7 @@ var menu = [
         prix : 55
     },
     {
-        item : "m9illa",
+        item : "Pizza",
         prix : 77
     }
 ]

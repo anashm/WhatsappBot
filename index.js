@@ -60,7 +60,6 @@ function getStage(stage){
     if(stage == 1){
         states[1].message = ""
         for (let index = 0; index < menu.length; index++) {
-            //states[1].message +=  +index+1 +' '+menu[index].item +' '+menu[index].prix+' $'+'\n'
             states[1].message +=`${+index+1}-${menu[index].item} ${menu[index].prix}$ \n`;
         }
         return message_choix_menu+states[1].message
@@ -74,8 +73,6 @@ function getStage(stage){
         }
        // return message_choix_menu+states[1].message
         
-        
-       //return states[stage].message+' it will cost you '+states[3].cost+' $';
         return`${states[stage].message} it will cost you ${states[3].cost}$`;
     }
     else if(states[stage]){
